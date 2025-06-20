@@ -9,26 +9,30 @@
 <body class="min-h-screen bg-gradient-to-r from-red-500 via-blue-500 to-yellow-400">
     <div class="container mx-auto max-w-4xl px-4">
         <!-- Header -->
+         <img src="gambar/logo-global-institute-4.png"style="width: 200px; height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ff6b6b;" alt="Circle">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Sistem Pembayaran</h1>
-            <p class="text-gray-600">Kelola transaksi dan pembayaran dengan mudah</p>
+            <h1 class="text-3xl font-bold text-black mb-2">Sistem Pembayaran</h1>
+            <p class="text-gray-600">Kelola transaksi pembayaran mahasiswa</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-8">
             <!-- Form Pembayaran -->
-            <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="bg-blue-600 rounded-xl shadow-lg p-6">
                 <div class="flex items-center mb-6">
                     <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <h2 class="text-xl font-semibold text-gray-800">Form Pembayaran</h2>
+                    <h2 class="text-xl font-semibold text-black">Form Pembayaran</h2>
                 </div>
 
                 <form id="paymentForm" class="space-y-4">
                     <!-- Nama Pelanggan -->
                     <div>
-                        <label for="customerName" class="block text-sm font-medium text-gray-700 mb-2">
-                            Nama Pelanggan
+                        <label for="customerName" class="block text-sm font-medium text-black mb-2">
+                            Nama
                         </label>
                         <input 
                             type="text" 
@@ -42,7 +46,7 @@
 
                     <!-- Email -->
                     <div>
-                        <label for="customerEmail" class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="customerEmail" class="block text-sm font-medium text-black mb-2">
                             Email
                         </label>
                         <input 
@@ -57,8 +61,8 @@
 
                     <!-- Produk/Layanan -->
                     <div>
-                        <label for="productSelect" class="block text-sm font-medium text-gray-700 mb-2">
-                            Pilih Produk/Layanan
+                        <label for="productSelect" class="block text-sm font-medium text-black mb-2">
+                            Pilih desain
                         </label>
                         <select 
                             id="productSelect"
@@ -66,17 +70,17 @@
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             required
                         >
-                            <option value="">Pilih produk...</option>
-                            <option value="basic" data-price="50000">Paket Basic - Rp 50.000</option>
-                            <option value="premium" data-price="100000">Paket Premium - Rp 100.000</option>
-                            <option value="professional" data-price="200000">Paket Professional - Rp 200.000</option>
-                            <option value="enterprise" data-price="500000">Paket Enterprise - Rp 500.000</option>
+                            <option value="">Pilih desain..</option>
+                            <option value="logo" data-price="50000">desain logo - Rp 50.000</option>
+                            <option value="browsur" data-price="100000">desain browsur  - Rp 100.000</option>
+                            <option value="cover buku" data-price="200000">desain cover buku - Rp 200.000</option>
+                            <option value="3D" data-price="500000">desain 3D - Rp 500.000</option>
                         </select>
                     </div>
 
                     <!-- Jumlah -->
                     <div>
-                        <label for="quantity" class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="quantity" class="block text-sm font-medium text-black mb-2">
                             Jumlah
                         </label>
                         <input 
@@ -92,32 +96,32 @@
 
                     <!-- Metode Pembayaran -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-black mb-2">
                             Metode Pembayaran
                         </label>
                         <div class="space-y-2">
                             <label class="flex items-center">
                                 <input type="radio" name="paymentMethod" value="transfer" class="text-blue-600 focus:ring-blue-500">
-                                <span class="ml-2 text-sm text-gray-700">Transfer Bank</span>
+                                <span class="ml-2 text-sm text-black">Transfer Bank</span>
                             </label>
                             <label class="flex items-center">
                                 <input type="radio" name="paymentMethod" value="ewallet" class="text-blue-600 focus:ring-blue-500">
-                                <span class="ml-2 text-sm text-gray-700">E-Wallet (OVO, GoPay, Dana)</span>
+                                <span class="ml-2 text-sm text-black">E-Wallet (OVO, GoPay, Dana)</span>
                             </label>
                             <label class="flex items-center">
                                 <input type="radio" name="paymentMethod" value="credit" class="text-blue-600 focus:ring-blue-500">
-                                <span class="ml-2 text-sm text-gray-700">Kartu Kredit</span>
+                                <span class="ml-2 text-sm text-black">Kartu Kredit</span>
                             </label>
                             <label class="flex items-center">
                                 <input type="radio" name="paymentMethod" value="cash" class="text-blue-600 focus:ring-blue-500">
-                                <span class="ml-2 text-sm text-gray-700">Bayar Tunai</span>
+                                <span class="ml-2 text-sm text-black">Bayar Tunai</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Kode Promo -->
                     <div>
-                        <label for="promoCode" class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="promoCode" class="block text-sm font-medium text-black mb-2">
                             Kode Promo (Opsional)
                         </label>
                         <div class="flex gap-2">
@@ -166,7 +170,7 @@
             </div>
 
             <!-- Riwayat Transaksi -->
-            <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="bg-yellow-300 rounded-xl shadow-lg p-6">
                 <div class="flex items-center justify-between mb-6">
                     <div class="flex items-center">
                         <svg class="w-6 h-6 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,7 +194,7 @@
                     </div>
                     <div class="text-center p-3 bg-green-50 rounded-lg">
                         <div class="text-2xl font-bold text-green-600" id="totalRevenue">Rp 0</div>
-                        <div class="text-sm text-gray-600">Pendapatan</div>
+                        <div class="text-sm text-gray-600">penerimaan</div>
                     </div>
                     <div class="text-center p-3 bg-purple-50 rounded-lg">
                         <div class="text-2xl font-bold text-purple-600" id="avgTransaction">Rp 0</div>
