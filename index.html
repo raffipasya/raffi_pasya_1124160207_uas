@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="id">
+    <html class="">
+  <head>
+
+<script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Saat halaman dibuka, cek apakah user sebelumnya pakai dark mode
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen p-6 
+             bg-gradient-to-r from-red-500 via-blue-500 to-yellow-400 
+             dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 
+             text-gray-900 dark:text-white">
+
+  <!-- Tombol Dark Mode -->
+  <button onclick="toggleDarkMode()" class="absolute top-4 right-4 px-4 py-2 rounded bg-white dark:bg-gray-700 text-black dark:text-white shadow">
+    🌙 Toggle Mode
+  </button>
+
+
+      <!-- konten form dan riwayat transaksi -->
+    </div>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Pembayaran - HTML & CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-r from-red-500 via-blue-500 to-yellow-400">
+<body class="bg-gradient-to-r from-red-500 via-blue-500 to-yellow-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
     <div class="container mx-auto max-w-4xl px-4">
         <!-- Header -->
          <img src="gambar/logo-global-institute-4.png"style="width: 200px; height: 200px;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #ff6b6b;" alt="Circle">
+        
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-black mb-2">Sistem Pembayaran</h1>
-            <p class="text-gray-600">Kelola transaksi pembayaran mahasiswa</p>
+            <h1 class="text-3xl font-bold text-black mb-2">Sistem Pemesanan desain</h1>
+            <p class="text-gray-600">daftar pemesanan desain</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-8">
             <!-- Form Pembayaran -->
             <div class="bg-blue-600 rounded-xl shadow-lg p-6">
                 <div class="flex items-center mb-6">
-                    <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-yellow-900 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <h2 class="text-xl font-semibold text-black">Form Pembayaran</h2>
+                    <h2 class="text-xl font-semibold text-black">Form Pemesanan</h2>
                 </div>
 
                 <form id="paymentForm" class="space-y-4">
@@ -164,7 +200,7 @@
                         type="submit"
                         class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"
                     >
-                        Proses Pembayaran
+                        Proses Pemesanan
                     </button>
                 </form>
             </div>
